@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PROMETHEUS CYCLE - The complete prompt lifecycle engine for professional-grade AI prompting">
+    <meta name="description" content="PROMETHEUS CYCLE - Professional prompt engineering framework for transforming basic prompts into production-ready masterpieces">
     <meta name="keywords" content="prompt engineering, AI, LLM, ChatGPT, Claude, prompting, PROMETHEUS">
     <meta name="author" content="SynthesisArc">
     <title>PROMETHEUS CYCLE | Professional Prompt Engineering Framework</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-v2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,18 +19,13 @@
             <div class="nav-brand">
                 <span class="logo">P</span>
                 <span class="brand-name">PROMETHEUS CYCLE</span>
+                <span class="brand-subtitle">by SynthesisArc</span>
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#examples">Examples</a>
-                <a href="#docs">Docs</a>
-                <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank" class="btn-nav">GitHub</a>
-            </div>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank">GitHub</a>
             </div>
         </div>
     </nav>
@@ -41,7 +36,7 @@
             <div class="hero-content">
                 <h1 class="hero-title">
                     Transform Any Prompt<br>
-                    <span class="gradient-text">From Zero to Masterpiece</span>
+                    From Zero to Masterpiece
                 </h1>
                 <p class="hero-subtitle">
                     The complete 4-phase prompt lifecycle engine that systematically elevates your AI outputs from basic to production-ready.
@@ -70,11 +65,12 @@
                 </div>
             </div>
         </div>
-        <div class="hero-bg-gradient"></div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="features" class="section">
         <div class="container">
             <h2 class="section-title">Why PROMETHEUS?</h2>
             <p class="section-subtitle">Systematic prompt engineering that teaches you while you use it</p>
@@ -113,75 +109,48 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
+    <section id="how-it-works" class="section section-alt">
         <div class="container">
             <h2 class="section-title">The 4-Phase Cycle</h2>
-            <p class="section-subtitle">From creation to optimization to deployment to iteration</p>
+            <p class="section-subtitle">Transform prompts through a systematic lifecycle</p>
             
-            <div class="phases">
-                <div class="phase">
-                    <div class="phase-number">1</div>
-                    <div class="phase-content">
-                        <h3>CREATION</h3>
-                        <p>Build a crystal-clear base prompt with structured XML tags: objective, context, requirements, steps, output, verification.</p>
-                        <div class="phase-example">
-                            <code>&lt;objective&gt;...&lt;/objective&gt;</code>
-                            <code>&lt;context&gt;...&lt;/context&gt;</code>
-                            <code>&lt;requirements&gt;...&lt;/requirements&gt;</code>
-                        </div>
-                    </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Phase 1: Creation</h3>
+                    <p>Build a crystal-clear base prompt with structured XML tags. Define objective, context, requirements, steps, output format, and verification criteria.</p>
                 </div>
                 
-                <div class="phase">
-                    <div class="phase-number">2</div>
-                    <div class="phase-content">
-                        <h3>OPTIMIZATION</h3>
-                        <p>Elevate with frontier tactics: Chain of Thought, Tree of Thoughts, personas, self-critique loops, and advanced techniques.</p>
-                        <ul class="phase-list">
-                            <li>Flaw audit (3-5 bullets)</li>
-                            <li>Inject 2-3 amplifiers</li>
-                            <li>Radically clear output</li>
-                        </ul>
-                    </div>
+                <div class="feature-card">
+                    <h3>Phase 2: Optimization</h3>
+                    <p>Elevate with frontier tactics. Flaw audit, inject amplifiers (CoT, ToT, personas), clarify output requirements, add self-critique loops.</p>
                 </div>
                 
-                <div class="phase">
-                    <div class="phase-number">3</div>
-                    <div class="phase-content">
-                        <h3>DEPLOYMENT</h3>
-                        <p>Model-tuned execution plan adapted for your target LLM (Grok, Claude, Gemini, etc.) with single, parallel, or sequential runs.</p>
-                        <div class="phase-tags">
-                            <span class="tag">ChatGPT</span>
-                            <span class="tag">Claude</span>
-                            <span class="tag">Grok</span>
-                            <span class="tag">Gemini</span>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <h3>Phase 3: Deployment</h3>
+                    <p>Model-tuned execution plan. Select optimal LLM, choose execution mode, configure parameters, execute and capture output.</p>
                 </div>
                 
-                <div class="phase">
-                    <div class="phase-number">4</div>
-                    <div class="phase-content">
-                        <h3>ITERATION</h3>
-                        <p>Track progress with scoring, verification checklists, and cycle logs. Continuously improve through feedback loops.</p>
-                        <div class="phase-score">
-                            <span class="score-label">Quality Score:</span>
-                            <span class="score-value">9/10</span>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <h3>Phase 4: Iteration</h3>
+                    <p>Track progress and improve. Score output quality, verify against checklist, log cycle, refine based on learnings.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- Examples Section -->
-    <section id="examples" class="examples">
+    <section id="examples" class="section">
         <div class="container">
-            <h2 class="section-title">Real-World Examples</h2>
-            <p class="section-subtitle">See PROMETHEUS transform basic prompts into professional-grade outputs</p>
+            <h2 class="section-title">See PROMETHEUS Transform Prompts</h2>
+            <p class="section-subtitle">Real-world examples showing the power of systematic prompt engineering</p>
             
             <div class="examples-grid">
+                <!-- Example 1: Email Writing -->
                 <div class="example-card">
                     <div class="example-header">
                         <h3>Email Writing</h3>
@@ -189,18 +158,18 @@
                     </div>
                     <div class="example-comparison">
                         <div class="before">
-                            <div class="label">Before</div>
-                            <p>"Write a professional email declining a meeting request because I have a scheduling conflict."</p>
+                            <div class="label">Before: Basic Prompt</div>
+                            <p>"Write a professional email declining a meeting request because I have a scheduling conflict. Make it polite and offer to reschedule."</p>
                         </div>
                         <div class="arrow">→</div>
                         <div class="after">
-                            <div class="label">After</div>
-                            <p>Full PROMETHEUS structure with persona, objective, context, requirements, steps, output, and verification.</p>
+                            <div class="label">After: PROMETHEUS-Optimized</div>
+                            <p>Full structured prompt with persona, objective, context, requirements, steps, output format, and verification criteria. Includes self-critique loop and relationship preservation guidelines.</p>
                         </div>
                     </div>
-                    <a href="examples.html#email" class="example-link">View Full Example →</a>
                 </div>
-                
+
+                <!-- Example 2: Content Creation -->
                 <div class="example-card">
                     <div class="example-header">
                         <h3>Content Creation</h3>
@@ -208,18 +177,18 @@
                     </div>
                     <div class="example-comparison">
                         <div class="before">
-                            <div class="label">Before</div>
-                            <p>"Write a LinkedIn post about why prompt engineering matters. Make it engaging."</p>
+                            <div class="label">Before: Basic Prompt</div>
+                            <p>"Write a LinkedIn post about why prompt engineering is still important even though AI models are getting smarter. Make it engaging and shareable. Around 300 words."</p>
                         </div>
                         <div class="arrow">→</div>
                         <div class="after">
-                            <div class="label">After</div>
-                            <p>Engineered for virality with pattern interrupt hook, narrative arc, and quotable insights.</p>
+                            <div class="label">After: PROMETHEUS-Optimized</div>
+                            <p>Engineered for virality with pattern interrupt hook, narrative arc, quotable insights, and Tree-of-Thoughts reasoning. Includes platform-specific optimization and shareability mechanics.</p>
                         </div>
                     </div>
-                    <a href="examples.html#content" class="example-link">View Full Example →</a>
                 </div>
-                
+
+                <!-- Example 3: Problem Solving -->
                 <div class="example-card">
                     <div class="example-header">
                         <h3>Problem Solving</h3>
@@ -227,113 +196,52 @@
                     </div>
                     <div class="example-comparison">
                         <div class="before">
-                            <div class="label">Before</div>
-                            <p>"Help me improve customer retention. Our churn rate is 8% monthly."</p>
+                            <div class="label">Before: Basic Prompt</div>
+                            <p>"I need help improving customer retention for my B2B SaaS company. Our churn rate is around 8% monthly. Can you analyze this and give me some recommendations?"</p>
                         </div>
                         <div class="arrow">→</div>
                         <div class="after">
-                            <div class="label">After</div>
-                            <p>Quantified recommendations with impact estimates, timelines, and implementation steps.</p>
+                            <div class="label">After: PROMETHEUS-Optimized</div>
+                            <p>Quantified recommendations with impact estimates, timelines, and implementation steps. Includes Chain-of-Thought reasoning, competitive benchmarking, and prioritization by effort vs. impact.</p>
                         </div>
                     </div>
-                    <a href="examples.html#problem-solving" class="example-link">View Full Example →</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="section-divider"></div>
 
     <!-- Quick Start Section -->
-    <section id="quick-start" class="quick-start">
+    <section id="quick-start" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Get Started in 3 Minutes</h2>
-            <p class="section-subtitle">Copy, paste, and start creating professional-grade prompts</p>
+            <p class="section-subtitle">Simple setup, powerful results</p>
             
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Copy the Framework</h3>
-                        <p>Download <code>prometheus-cycle-v2.md</code> from GitHub and copy the entire contents.</p>
-                        <a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/prometheus-cycle-v2.md" target="_blank" class="step-link">Get Framework →</a>
-                    </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Step 1: Get the Framework</h3>
+                    <p>Download <code>prometheus-cycle-v2.md</code> from the GitHub repository. It's a single file containing the complete framework.</p>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Paste as System Prompt</h3>
-                        <p>In your LLM (ChatGPT, Claude, Grok), paste PROMETHEUS as your system prompt or first message.</p>
-                    </div>
+                <div class="feature-card">
+                    <h3>Step 2: Paste as System Prompt</h3>
+                    <p>Copy the entire contents and paste it as your system prompt or first message in your LLM (ChatGPT, Claude, Grok, Gemini).</p>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Send Your Task</h3>
-                        <p>Describe what you want to accomplish. PROMETHEUS guides you through all 4 phases automatically.</p>
-                        <div class="example-task">
-                            <code>"Write a professional email declining a meeting request"</code>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <h3>Step 3: Describe Your Task</h3>
+                    <p>Simply describe what you want to accomplish. PROMETHEUS will guide you through all 4 phases automatically.</p>
                 </div>
             </div>
-            
-            <div class="cta-box">
-                <h3>Ready to Transform Your Prompting?</h3>
-                <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank" class="btn btn-primary btn-large">Get PROMETHEUS Now</a>
+
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank" class="btn btn-primary">Download from GitHub</a>
             </div>
         </div>
     </section>
 
-    <!-- Documentation Section -->
-    <section id="docs" class="documentation">
-        <div class="container">
-            <h2 class="section-title">Complete Documentation</h2>
-            <p class="section-subtitle">From beginner to advanced, we've got you covered</p>
-            
-            <div class="docs-grid">
-                <div class="doc-category">
-                    <h3>🎯 Core Concepts</h3>
-                    <ul class="doc-list">
-                        <li><a href="docs.html#what-is-prompting">What Is Prompt Engineering?</a></li>
-                        <li><a href="docs.html#core-techniques">The 4 Core Techniques</a></li>
-                        <li><a href="docs.html#prometheus-structure">PROMETHEUS Structure</a></li>
-                        <li><a href="docs.html#modes">Beginner vs Pro Mode</a></li>
-                    </ul>
-                </div>
-                
-                <div class="doc-category">
-                    <h3>📚 Guides</h3>
-                    <ul class="doc-list">
-                        <li><a href="docs.html#quick-start">Quick Start Guide</a></li>
-                        <li><a href="docs.html#tutorial">Complete Tutorial</a></li>
-                        <li><a href="docs.html#best-practices">Best Practices</a></li>
-                        <li><a href="docs.html#troubleshooting">Troubleshooting</a></li>
-                    </ul>
-                </div>
-                
-                <div class="doc-category">
-                    <h3>💡 Examples</h3>
-                    <ul class="doc-list">
-                        <li><a href="examples.html#email">Email Writing</a></li>
-                        <li><a href="examples.html#content">Content Creation</a></li>
-                        <li><a href="examples.html#problem-solving">Problem Solving</a></li>
-                        <li><a href="examples.html#data-analysis">Data Analysis</a></li>
-                    </ul>
-                </div>
-                
-                <div class="doc-category">
-                    <h3>🚀 Advanced</h3>
-                    <ul class="doc-list">
-                        <li><a href="docs.html#chain-of-thought">Chain of Thought (CoT)</a></li>
-                        <li><a href="docs.html#tree-of-thoughts">Tree of Thoughts (ToT)</a></li>
-                        <li><a href="docs.html#self-critique">Self-Critique Loops</a></li>
-                        <li><a href="docs.html#model-optimization">Model Optimization</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="section-divider"></div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -347,30 +255,36 @@
                     <p class="footer-tagline">Professional prompt engineering for everyone</p>
                 </div>
                 
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="docs.html">Documentation</a></li>
-                            <li><a href="examples.html">Examples</a></li>
-                            <li><a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank">GitHub</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="https://synthesisarc.com" target="_blank">SynthesisArc</a></li>
-                            <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a></li>
-                            <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/LICENSE" target="_blank">License</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/SynthesisArc/prometheus-cycle">GitHub Repository</a></li>
+                        <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/docs/quick-start.md">Quick Start Guide</a></li>
+                        <li><a href="https://github.com/SynthesisArc/prometheus-cycle/tree/main/examples">Examples</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://synthesisarc.com">SynthesisArc</a></li>
+                        <li><a href="https://synthesisarc.com/about">About Us</a></li>
+                        <li><a href="https://synthesisarc.com/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/LICENSE">MIT License</a></li>
+                        <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/CONTRIBUTING.md">Contributing</a></li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 SynthesisArc. All rights reserved. | MIT License</p>
-                <p>Built with ❤️ by <a href="https://synthesisarc.com" target="_blank">SynthesisArc</a></p>
+                <div>© 2025 SynthesisArc. All rights reserved.</div>
+                <div>Version 2.0</div>
             </div>
         </div>
     </footer>
