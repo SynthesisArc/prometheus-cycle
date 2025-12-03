@@ -1,10 +1,15 @@
-// PROMETHEUS CYCLE - Main JavaScript
-// SynthesisArc 2025
+// ============================================
+// PROMETHEUS CYCLE - Apple/IBM Design System
+// Version 2.0 - December 2025
+// ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for anchor links
+    
+    // ============================================
+    // SMOOTH SCROLLING FOR ANCHOR LINKS
+    // ============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -15,42 +20,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Mobile menu toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
     
-    if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    }
-
-    // Navbar background on scroll
+    // ============================================
+    // NAVBAR SCROLL EFFECT (Apple-style)
+    // ============================================
     const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
         
-        if (currentScroll > 100) {
-            navbar.style.background = 'rgba(26, 35, 50, 0.98)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+        if (currentScroll > 50) {
+            navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.08)';
         } else {
-            navbar.style.background = 'rgba(26, 35, 50, 0.95)';
             navbar.style.boxShadow = 'none';
         }
-        
-        lastScroll = currentScroll;
     });
-
-    // Intersection Observer for fade-in animations
+    
+    // ============================================
+    // INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS
+    // ============================================
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
+    
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -59,27 +52,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-
-    // Observe all feature cards, phase elements, and example cards
-    document.querySelectorAll('.feature-card, .phase, .example-card, .step, .doc-category').forEach(el => {
+    
+    // Observe all animatable elements
+    document.querySelectorAll('.feature-card, .example-card').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
         observer.observe(el);
     });
-
-    // Add hover effect to buttons
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-        });
-        
-        btn.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Stats counter animation
+    
+    // ============================================
+    // STATS COUNTER ANIMATION
+    // ============================================
     const stats = document.querySelectorAll('.stat-number');
     const statsObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
@@ -89,15 +73,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, { threshold: 0.5 });
-
+    
     stats.forEach(stat => statsObserver.observe(stat));
-
+    
     function animateValue(element) {
         const target = element.textContent.trim();
         const isPercent = target.includes('%');
-        const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+        const numericValue = parseInt(target.replace(/[^0-9,]/g, '').replace(',', ''));
         
-        if (isNaN(numericValue)) return;
+        if (isNaN(numericValue) || numericValue === 0) return;
         
         const duration = 1500;
         const steps = 60;
@@ -107,15 +91,26 @@ document.addEventListener('DOMContentLoaded', function() {
         const timer = setInterval(() => {
             current += increment;
             if (current >= numericValue) {
-                element.textContent = target;
+                if (numericValue >= 1000) {
+                    element.textContent = numericValue.toLocaleString();
+                } else {
+                    element.textContent = numericValue + (isPercent ? '%' : '');
+                }
                 clearInterval(timer);
             } else {
-                element.textContent = Math.floor(current) + (isPercent ? '%' : '');
+                const displayValue = Math.floor(current);
+                if (displayValue >= 1000) {
+                    element.textContent = displayValue.toLocaleString();
+                } else {
+                    element.textContent = displayValue + (isPercent ? '%' : '');
+                }
             }
         }, duration / steps);
     }
-
-    // Copy code blocks on click
+    
+    // ============================================
+    // COPY CODE BLOCKS ON CLICK
+    // ============================================
     document.querySelectorAll('code').forEach(code => {
         code.style.cursor = 'pointer';
         code.title = 'Click to copy';
@@ -124,28 +119,38 @@ document.addEventListener('DOMContentLoaded', function() {
             const text = this.textContent;
             navigator.clipboard.writeText(text).then(() => {
                 const originalText = this.textContent;
-                this.textContent = '✓ Copied!';
-                this.style.color = '#00d4ff';
+                const originalColor = this.style.color;
+                
+                this.textContent = 'Copied!';
+                this.style.color = '#00D4FF';
                 
                 setTimeout(() => {
                     this.textContent = originalText;
-                    this.style.color = '';
+                    this.style.color = originalColor;
                 }, 1500);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
             });
         });
     });
-
-    // Add parallax effect to hero background
-    const heroBg = document.querySelector('.hero-bg-gradient');
-    if (heroBg) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+    
+    // ============================================
+    // MOBILE MENU TOGGLE (if needed)
+    // ============================================
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.classList.toggle('active');
         });
     }
-
-    // Log initialization
-    console.log('%c🔥 PROMETHEUS CYCLE', 'color: #00d4ff; font-size: 20px; font-weight: bold;');
-    console.log('%cProfessional Prompt Engineering Framework', 'color: #9d4edd; font-size: 14px;');
-    console.log('%cBuilt by SynthesisArc | https://synthesisarc.com', 'color: #a0a0a0; font-size: 12px;');
+    
+    // ============================================
+    // CONSOLE BRANDING
+    // ============================================
+    console.log('%cPROMETHEUS CYCLE', 'color: #00D4FF; font-size: 24px; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, sans-serif;');
+    console.log('%cProfessional Prompt Engineering Framework', 'color: #6B7280; font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;');
+    console.log('%cBuilt by SynthesisArc | https://synthesisarc.com', 'color: #9CA3AF; font-size: 12px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;');
 });
