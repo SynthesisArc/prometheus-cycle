@@ -147,9 +147,10 @@ code {
 .btn-nav {
     padding: 0.5rem 1.5rem;
     background: linear-gradient(135deg, var(--color-cyan), var(--color-purple));
-    border-radius: 8px;
     color: var(--color-white) !important;
     font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .btn-nav:hover {
@@ -247,6 +248,7 @@ code {
 .btn-primary {
     background: linear-gradient(135deg, var(--color-cyan), var(--color-purple));
     color: var(--color-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
