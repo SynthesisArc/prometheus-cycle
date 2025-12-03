@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentScroll = window.pageYOffset;
         
         if (currentScroll > 50) {
-            navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.08)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
     });
     
@@ -47,17 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
     
     // Observe all animatable elements
-    document.querySelectorAll('.feature-card, .example-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    document.querySelectorAll('.feature-card, .example-card, .phase-card, .fade-in').forEach(el => {
+        el.classList.add('fade-in');
         observer.observe(el);
     });
     
