@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete PROMETHEUS CYCLE documentation - from beginner to advanced">
+    <title>Documentation | PROMETHEUS CYCLE</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; color: white;">
+                    <span class="logo">🔥</span>
+                    <span class="brand-name">PROMETHEUS CYCLE</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="examples.html">Examples</a>
+                <a href="docs.html">Docs</a>
+                <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank" class="btn-nav">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh; padding: calc(80px + 4rem) 0 4rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 3rem;">Documentation</h1>
+                <p class="hero-subtitle">Everything you need to master prompt engineering with PROMETHEUS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Content -->
+    <section class="documentation-content">
+        <div class="container">
+            <div class="docs-layout">
+                <!-- Sidebar Navigation -->
+                <aside class="docs-sidebar">
+                    <nav class="docs-nav">
+                        <div class="nav-section">
+                            <h4>Getting Started</h4>
+                            <ul>
+                                <li><a href="#quick-start">Quick Start (3 min)</a></li>
+                                <li><a href="#what-is-prompting">What Is Prompt Engineering?</a></li>
+                                <li><a href="#why-prometheus">Why PROMETHEUS?</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>Core Concepts</h4>
+                            <ul>
+                                <li><a href="#core-techniques">The 4 Core Techniques</a></li>
+                                <li><a href="#prometheus-structure">PROMETHEUS Structure</a></li>
+                                <li><a href="#4-phase-cycle">The 4-Phase Cycle</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>Advanced</h4>
+                            <ul>
+                                <li><a href="#chain-of-thought">Chain of Thought</a></li>
+                                <li><a href="#tree-of-thoughts">Tree of Thoughts</a></li>
+                                <li><a href="#self-critique">Self-Critique Loops</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#best-practices">Best Practices</a></li>
+                                <li><a href="#troubleshooting">Troubleshooting</a></li>
+                                <li><a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank">GitHub Repo</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="docs-main">
+                    <!-- Quick Start -->
+                    <article id="quick-start" class="doc-article">
+                        <h2>🚀 Quick Start (3 Minutes)</h2>
+                        <p class="lead">Get started with PROMETHEUS in three simple steps.</p>
+                        
+                        <div class="step-box">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Get the Framework</h3>
+                                <p>Download <code>prometheus-cycle-v2.md</code> from the <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank">GitHub repository</a>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-box">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Paste as System Prompt</h3>
+                                <p>Copy the entire contents and paste it as your system prompt or first message in your LLM (ChatGPT, Claude, Grok, Gemini).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-box">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Describe Your Task</h3>
+                                <p>Simply describe what you want to accomplish. PROMETHEUS will guide you through all 4 phases automatically.</p>
+                                <div class="code-example">
+                                    <code>"Write a professional email declining a meeting request"</code>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-box">
+                            <strong>💡 Pro Tip:</strong> PROMETHEUS has a beginner mode that explains everything simply. As you get comfortable, you can switch to pro mode for advanced features.
+                        </div>
+                    </article>
+
+                    <!-- What Is Prompt Engineering -->
+                    <article id="what-is-prompting" class="doc-article">
+                        <h2>🤔 What Is Prompt Engineering?</h2>
+                        <p class="lead">Prompt engineering is the art and science of communicating effectively with AI models to get the outputs you want.</p>
+                        
+                        <p>Think of it like this: When you talk to an expert, you don't just say "tell me about life." You ask specific, thoughtful questions that draw out their expertise. Prompting is the same—it's about asking the right questions in the right way.</p>
+                        
+                        <h3>Why It Matters</h3>
+                        <ul>
+                            <li><strong>Better Outputs:</strong> Clear prompts = better results, fewer revisions</li>
+                            <li><strong>Consistency:</strong> Structured prompts produce consistent quality</li>
+                            <li><strong>Efficiency:</strong> Get what you need faster, with less back-and-forth</li>
+                            <li><strong>Control:</strong> Guide the AI toward exactly what you want</li>
+                        </ul>
+                        
+                        <div class="warning-box">
+                            <strong>⚠️ Common Myth:</strong> "Prompt engineering is dead now that models are smarter." FALSE! The smarter the model, the MORE your prompts matter. Better tools require better questions.
+                        </div>
+                    </article>
+
+                    <!-- Core Techniques -->
+                    <article id="core-techniques" class="doc-article">
+                        <h2>🎯 The 4 Core Techniques</h2>
+                        <p class="lead">Master these four techniques and you'll dramatically improve your prompting.</p>
+                        
+                        <div class="technique-card">
+                            <h3>1. Persona</h3>
+                            <p>Give the AI a role to narrow its focus and provide an expertise lens.</p>
+                            <div class="code-example">
+                                <code>&lt;persona&gt;You are a senior data scientist with expertise in statistical analysis.&lt;/persona&gt;</code>
+                            </div>
+                            <p><strong>Why it works:</strong> Personas activate relevant knowledge and set the right tone.</p>
+                        </div>
+                        
+                        <div class="technique-card">
+                            <h3>2. Context</h3>
+                            <p>Provide all relevant details to prevent hallucinations and generic responses.</p>
+                            <div class="code-example">
+                                <code>&lt;context&gt;Company: B2B SaaS, Series A, 50-200 customers, limited resources&lt;/context&gt;</code>
+                            </div>
+                            <p><strong>Why it works:</strong> Context grounds the AI in your specific situation.</p>
+                        </div>
+                        
+                        <div class="technique-card">
+                            <h3>3. Format</h3>
+                            <p>Specify exactly how you want the output structured.</p>
+                            <div class="code-example">
+                                <code>&lt;output&gt;Subject line + 3-paragraph body + signature&lt;/output&gt;</code>
+                            </div>
+                            <p><strong>Why it works:</strong> Format prevents ambiguity and ensures usability.</p>
+                        </div>
+                        
+                        <div class="technique-card">
+                            <h3>4. Chain of Thought (CoT)</h3>
+                            <p>Ask the AI to "think step-by-step" before providing an answer.</p>
+                            <div class="code-example">
+                                <code>&lt;steps&gt;Think step-by-step: 1. Identify root causes 2. Prioritize by impact 3. Recommend solutions&lt;/steps&gt;</code>
+                            </div>
+                            <p><strong>Why it works:</strong> CoT dramatically improves accuracy for complex reasoning.</p>
+                        </div>
+                        
+                        <div class="info-box">
+                            <strong>📚 Learn More:</strong> See these techniques in action in our <a href="examples.html">Examples</a> section.
+                        </div>
+                    </article>
+
+                    <!-- PROMETHEUS Structure -->
+                    <article id="prometheus-structure" class="doc-article">
+                        <h2>🏗️ PROMETHEUS Structure</h2>
+                        <p class="lead">PROMETHEUS uses XML-style tags to create crystal-clear, structured prompts.</p>
+                        
+                        <div class="structure-diagram">
+                            <div class="structure-item">
+                                <code>&lt;objective&gt;</code>
+                                <p>What you're trying to achieve (clear, specific goal)</p>
+                            </div>
+                            
+                            <div class="structure-item">
+                                <code>&lt;context&gt;</code>
+                                <p>Background information, constraints, relevant details</p>
+                            </div>
+                            
+                            <div class="structure-item">
+                                <code>&lt;requirements&gt;</code>
+                                <p>Specific constraints, tone, length, what to avoid</p>
+                            </div>
+                            
+                            <div class="structure-item">
+                                <code>&lt;steps&gt;</code>
+                                <p>How to accomplish the task (Chain of Thought)</p>
+                            </div>
+                            
+                            <div class="structure-item">
+                                <code>&lt;output&gt;</code>
+                                <p>Expected format and deliverable</p>
+                            </div>
+                            
+                            <div class="structure-item">
+                                <code>&lt;verification&gt;</code>
+                                <p>Success criteria and quality checks</p>
+                            </div>
+                        </div>
+                        
+                        <p><strong>Why XML tags?</strong> They provide clear structure that both humans and AI can easily parse. No ambiguity about what each section means.</p>
+                    </article>
+
+                    <!-- 4-Phase Cycle -->
+                    <article id="4-phase-cycle" class="doc-article">
+                        <h2>🔄 The 4-Phase Cycle</h2>
+                        <p class="lead">PROMETHEUS transforms prompts through a systematic 4-phase lifecycle.</p>
+                        
+                        <div class="phase-detail">
+                            <h3>Phase 1: CREATION</h3>
+                            <p>Build a crystal-clear base prompt with structured XML tags.</p>
+                            <ul>
+                                <li>Define objective clearly</li>
+                                <li>Provide full context</li>
+                                <li>Specify requirements</li>
+                                <li>Outline steps</li>
+                                <li>Define output format</li>
+                                <li>Set verification criteria</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-detail">
+                            <h3>Phase 2: OPTIMIZATION</h3>
+                            <p>Elevate with frontier tactics and advanced techniques.</p>
+                            <ul>
+                                <li>Flaw audit (identify 3-5 weaknesses)</li>
+                                <li>Inject 2-3 amplifiers (CoT, ToT, personas)</li>
+                                <li>Radically clarify output requirements</li>
+                                <li>Add self-critique loops</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-detail">
+                            <h3>Phase 3: DEPLOYMENT</h3>
+                            <p>Model-tuned execution plan adapted for your target LLM.</p>
+                            <ul>
+                                <li>Select optimal model (ChatGPT, Claude, Grok, Gemini)</li>
+                                <li>Choose execution mode (single, parallel, sequential)</li>
+                                <li>Configure model-specific parameters</li>
+                                <li>Execute and capture output</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-detail">
+                            <h3>Phase 4: ITERATION</h3>
+                            <p>Track progress and continuously improve through feedback loops.</p>
+                            <ul>
+                                <li>Score output quality (1-10)</li>
+                                <li>Verify against checklist</li>
+                                <li>Log cycle for future reference</li>
+                                <li>Refine based on learnings</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Chain of Thought -->
+                    <article id="chain-of-thought" class="doc-article">
+                        <h2>🧠 Chain of Thought (CoT)</h2>
+                        <p class="lead">One of the most powerful techniques for improving AI reasoning accuracy.</p>
+                        
+                        <p>Chain of Thought prompting asks the AI to "think step-by-step" before providing an answer. This forces the model to show its reasoning process, dramatically improving accuracy for complex tasks.</p>
+                        
+                        <h3>When to Use CoT</h3>
+                        <ul>
+                            <li>Multi-step calculations</li>
+                            <li>Logical deductions</li>
+                            <li>Strategic planning</li>
+                            <li>Root cause analysis</li>
+                            <li>Trade-off evaluations</li>
+                        </ul>
+                        
+                        <h3>Basic CoT Pattern</h3>
+                        <div class="code-example">
+                            <code>&lt;steps&gt;<br>
+Think step-by-step:<br>
+1. [First step]<br>
+2. [Second step]<br>
+3. [Third step]<br>
+...<br>
+N. [Final step]<br>
+&lt;/steps&gt;</code>
+                        </div>
+                        
+                        <div class="info-box">
+                            <strong>📊 Research:</strong> CoT can improve accuracy by 20-50%+ on complex reasoning tasks. <a href="https://arxiv.org/abs/2201.11903" target="_blank">Source: Wei et al., 2022</a>
+                        </div>
+                        
+                        <p><strong>Learn more:</strong> See the full <a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/docs/advanced/chain-of-thought.md" target="_blank">Chain of Thought guide</a> on GitHub.</p>
+                    </article>
+
+                    <!-- Best Practices -->
+                    <article id="best-practices" class="doc-article">
+                        <h2>✨ Best Practices</h2>
+                        <p class="lead">Tips and tricks for getting the most out of PROMETHEUS.</p>
+                        
+                        <div class="practice-card">
+                            <h3>1. Start Simple, Then Optimize</h3>
+                            <p>Don't try to write the perfect prompt on the first try. Start with a basic prompt, see what you get, then optimize.</p>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <h3>2. Be Specific</h3>
+                            <p>"Write an email" is vague. "Write a 150-word professional email declining a meeting request while maintaining warmth" is specific.</p>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <h3>3. Use Examples</h3>
+                            <p>Show the AI what you want with examples. "Like this: [example]" is incredibly powerful.</p>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <h3>4. Tell It What to Avoid</h3>
+                            <p>Don't just say what you want—say what you DON'T want. "Avoid jargon, clichés, and generic advice."</p>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <h3>5. Build a Prompt Library</h3>
+                            <p>Save prompts that work well. Reuse and adapt them for similar tasks.</p>
+                        </div>
+                        
+                        <div class="practice-card">
+                            <h3>6. Test Across Models</h3>
+                            <p>Different models have different strengths. ChatGPT excels at conversation, Claude at long-form analysis, Grok at real-time data.</p>
+                        </div>
+                    </article>
+
+                    <!-- Troubleshooting -->
+                    <article id="troubleshooting" class="doc-article">
+                        <h2>🔧 Troubleshooting</h2>
+                        <p class="lead">Common issues and how to fix them.</p>
+                        
+                        <div class="troubleshoot-item">
+                            <h3>Problem: Output is too generic</h3>
+                            <p><strong>Solution:</strong> Add more context. Provide specific details about your situation, constraints, and goals.</p>
+                        </div>
+                        
+                        <div class="troubleshoot-item">
+                            <h3>Problem: Output is too long/short</h3>
+                            <p><strong>Solution:</strong> Specify exact length in requirements. "Exactly 300 words" or "Under 150 words."</p>
+                        </div>
+                        
+                        <div class="troubleshoot-item">
+                            <h3>Problem: Wrong tone</h3>
+                            <p><strong>Solution:</strong> Be explicit about tone. "Warm and conversational" vs. "Formal and professional."</p>
+                        </div>
+                        
+                        <div class="troubleshoot-item">
+                            <h3>Problem: Missing key information</h3>
+                            <p><strong>Solution:</strong> Add verification criteria. "Verify: Does this include X, Y, and Z?"</p>
+                        </div>
+                        
+                        <div class="troubleshoot-item">
+                            <h3>Problem: Inconsistent quality</h3>
+                            <p><strong>Solution:</strong> Add self-critique loops. "Review your output for [specific issues] and revise."</p>
+                        </div>
+                    </article>
+
+                    <!-- CTA -->
+                    <div class="cta-box" style="margin-top: 4rem;">
+                        <h3>Ready to Master Prompt Engineering?</h3>
+                        <p style="margin-bottom: 2rem; color: var(--color-gray-light);">Get PROMETHEUS and start creating professional-grade prompts</p>
+                        <a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank" class="btn btn-primary btn-large">Get PROMETHEUS Now</a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo">🔥</span>
+                        <span class="brand-name">PROMETHEUS CYCLE</span>
+                    </div>
+                    <p class="footer-tagline">Professional prompt engineering for everyone</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="https://github.com/SynthesisArc/prometheus-cycle" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="https://synthesisarc.com" target="_blank">SynthesisArc</a></li>
+                            <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/CONTRIBUTING.md" target="_blank">Contributing</a></li>
+                            <li><a href="https://github.com/SynthesisArc/prometheus-cycle/blob/main/LICENSE" target="_blank">License</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SynthesisArc. All rights reserved. | MIT License</p>
+                <p>Built with ❤️ by <a href="https://synthesisarc.com" target="_blank">SynthesisArc</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    
+    <style>
+        .documentation-content {
+            background: var(--color-navy);
+            padding: 4rem 0;
+        }
+        
+        .docs-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 4rem;
+        }
+        
+        .docs-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .docs-nav {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .nav-section {
+            margin-bottom: 2rem;
+        }
+        
+        .nav-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .nav-section h4 {
+            color: var(--color-cyan);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-section ul {
+            list-style: none;
+        }
+        
+        .nav-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-section a {
+            color: var(--color-gray-light);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            display: block;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .nav-section a:hover {
+            color: var(--color-cyan);
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .docs-main {
+            max-width: 800px;
+        }
+        
+        .doc-article {
+            margin-bottom: 4rem;
+            scroll-margin-top: 100px;
+        }
+        
+        .doc-article h2 {
+            color: var(--color-cyan);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .lead {
+            font-size: 1.2rem;
+            color: var(--color-gray-light);
+            margin-bottom: 2rem;
+        }
+        
+        .step-box {
+            display: flex;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step-box .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--color-cyan), var(--color-purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+        
+        .code-example {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--color-cyan);
+            margin: 1rem 0;
+        }
+        
+        .code-example code {
+            background: none;
+            padding: 0;
+            color: var(--color-cyan);
+        }
+        
+        .info-box, .warning-box {
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box {
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 4px solid var(--color-cyan);
+        }
+        
+        .warning-box {
+            background: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid var(--color-coral);
+        }
+        
+        .technique-card, .phase-detail, .practice-card, .troubleshoot-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .technique-card h3, .phase-detail h3, .practice-card h3, .troubleshoot-item h3 {
+            color: var(--color-cyan);
+            margin-bottom: 0.5rem;
+        }
+        
+        .structure-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .structure-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--color-cyan);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+        }
+        
+        .structure-item code {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .structure-item p {
+            color: var(--color-gray-light);
+            margin: 0;
+        }
+        
+        @media (max-width: 968px) {
+            .docs-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .docs-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</body>
+</html>
