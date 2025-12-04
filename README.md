@@ -3,16 +3,26 @@
 **The Complete Prompt Lifecycle Engine**
 
 [![SynthesisArc](https://img.shields.io/badge/Built%20by-SynthesisArc-00d4ff?style=for-the-badge)](https://synthesisarc.com)
-[![Version](https://img.shields.io/badge/Version-2.0-blueviolet?style=for-the-badge)](https://github.com/SynthesisArc/prometheus-cycle)
+[![Version](https://img.shields.io/badge/Version-3.0-blueviolet?style=for-the-badge)](https://github.com/SynthesisArc/prometheus-cycle)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-> **Transform any prompt from zero to masterpiece through a rigorous 4-phase cycle.**
+> **You talk. I structure. We both learn.**  
+> Transform any prompt from zero to masterpiece through a collaborative 4-phase cycle.
 
 ---
 
 ## 🎯 What Is PROMETHEUS CYCLE?
 
-PROMETHEUS CYCLE is a **systematic framework** that guides you through the complete lifecycle of prompt engineering—from initial creation to production-ready optimization. It's not just a template; it's a **thinking system** that teaches you to craft professional-grade prompts while you use it.
+PROMETHEUS CYCLE is a **collaborative learning system** that guides you through the complete lifecycle of prompt engineering—from initial creation to production-ready optimization. It's not just a template; it's a **thinking partner** that adapts to how you work and teaches you to craft professional-grade prompts while you use it.
+
+### 🆕 What's New in v3.0
+
+- **Flexible Input Handling** - Talk naturally, use structure, or shorthand—PROMETHEUS adapts
+- **Adaptive Intelligence** - Learns from your behavior, not just keywords
+- **Session Learning** - Tracks preferences and patterns across iterations
+- **Quick Mode** - Simple tasks get optimized prompts immediately
+- **Enhanced Persona Tag** - Now includes `<persona>` in the 7-section XML structure
+- **Smarter Pro Mode** - Detects expertise from how you interact, not just what you say
 
 ### The 4 Phases
 
@@ -38,7 +48,7 @@ PROMETHEUS CYCLE is a **systematic framework** that guides you through the compl
 
 ### Step 1: Copy the Framework
 
-Copy the entire contents of [`prometheus-cycle-v2.md`](prometheus-cycle-v2.md)
+Copy the entire contents of [`prometheus-cycle-v3.0.md`](prometheus-cycle-v3.0.md)
 
 ### Step 2: Paste as System Prompt
 
