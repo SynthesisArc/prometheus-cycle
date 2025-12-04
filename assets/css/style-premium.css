@@ -1054,7 +1054,22 @@ code:hover {
 }
 
 .navbar.scrolled {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: var(--color-bg-dark) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled .brand-name,
+.navbar.scrolled .brand-subtitle,
+.navbar.scrolled .nav-links a {
+    color: var(--color-white) !important;
+}
+
+.navbar.scrolled .logo {
+    color: var(--color-accent) !important;
+}
+
+.navbar.scrolled .nav-links a:hover {
+    color: var(--color-accent) !important;
 }
 
 /* ============================================
