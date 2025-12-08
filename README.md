@@ -103,6 +103,10 @@ PROMETHEUS will guide you through all 5 phases automatically, producing a produc
 - **[PROMETHEUS CYCLE v4.0](prometheus-cycle-v4.0.md)** - Complete concise framework (537 lines)
 - **[Changelog](CHANGELOG.md)** - Version history and evolution
 
+### Claude Code Integration
+
+- **[Claude Code Integration](docs/claude-code-integration.md)** - Complete setup guide for integrating PROMETHEUS with Claude Code (claude.ai/code). Includes slash command configuration and precommit hooks for automated prompt engineering.
+
 ### Specialized Tracks
 
 v4.0 includes 5 specialized tracks with domain-specific guidance:
