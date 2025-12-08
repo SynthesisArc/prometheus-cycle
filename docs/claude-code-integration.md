@@ -8,7 +8,7 @@ The PROMETHEUS Cycle enhances Claude Code with a structured 5-phase development 
 
 ## Installation
 
-### Step 1: Copy the Framework Files
+### Step 1: Install the PROMETHEUS Framework
 
 ```bash
 # From the root of this repository:
@@ -16,35 +16,27 @@ The PROMETHEUS Cycle enhances Claude Code with a structured 5-phase development 
 # 1. Create directories
 mkdir -p ~/.claude/commands
 
-# 2. Install the latest framework (single source of truth)
-cp prometheus-cycle/prometheus{current_version}.md ~/.claude/PROMETHEUS.md
+# 2. Copy the latest version of the framework from the repo root into ~/.claude/PROMETHEUS.md
+# Note: Update to the current version when releasing new versions
+cp prometheus-cycle-v4.0.md ~/.claude/PROMETHEUS.md
 
-# 3. Install the slash command
-cp .claude/commands/prometheus.md ~/.claude/commands/prometheus.md
-
-edit ~/.claude/commands/prometheus.md
-
-prepend the following to top the command file
-
+# 3. Install the slash command with metadata
+cat > ~/.claude/commands/prometheus.md << 'EOF'
 ---
 name: prometheus
 description: expert prompt engineer that creates, optimize, XML – structured prompts with intelligent depth, selection.
 argument-hint: [task description]
 ---
 
-```
-
-### Step 2: Create the Slash Command
-
-Create `~/.claude/commands/prometheus.md` with the following content:
-
-```markdown
 Read and apply the PROMETHEUS framework from ~/.claude/PROMETHEUS.md
 
 Execute the full PROMETHEUS cycle on this request:
 
 $ARGUMENTS
+EOF
 ```
+
+That's it! The PROMETHEUS framework is now installed and ready to use.
 
 ## Usage
 
